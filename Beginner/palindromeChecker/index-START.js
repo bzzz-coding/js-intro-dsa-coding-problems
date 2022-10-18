@@ -9,11 +9,11 @@ e.g palindromeChecker('racecar') // will return true
 function palindromeChecker1(text) {
     let mid = Math.floor(text.length / 2)
     let firstHalf = ''
-    let secondHalf = text.slice(-mid).toLowerCase()
+    let secondHalf = text.slice(-mid)
     for (let i = 0; i < mid; i++) {
-        firstHalf = text[i].toLowerCase() + firstHalf
+        firstHalf = text[i] + firstHalf
     }
-    return firstHalf === secondHalf
+    return firstHalf.toLowerCase() === secondHalf.toLowerCase()
 }
 
 // loop through entire word
