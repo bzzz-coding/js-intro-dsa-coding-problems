@@ -34,10 +34,15 @@ function pigLatin2(str) {
   return ind === -1 ? str + 'ay' : str.slice(ind) + str.slice[0, ind] + 'ay'
 }
 
+function pigLatin(str) {
+  return str
+  .replace(/^([aeiouy])(._)/, '$1$2way')
+  .replace(/^(_[_^aeiouy]+)(._)/, '$2$1ay')
+}
 
-// console.log(pigLatin('pig'))
-// console.log(pigLatin('glove'))
-// console.log(pigLatin('explain'))
-// console.log(pigLatin('psss'))
+console.log(pigLatin('pig'))
+console.log(pigLatin('glove'))
+console.log(pigLatin('explain'))
+console.log(pigLatin('psss'))
 
 // Comparing: https://jsbench.me/shl9eqql0n/1
